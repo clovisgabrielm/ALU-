@@ -1,0 +1,29 @@
+module ula(carry_in, a, b, carry_out, operation, result);
+
+	input carry_in;
+	input a, b;
+	input [1:0] operation;
+	output carry_out, result;
+	
+	reg result;
+	
+	and a1 (and_result, a, b);
+	
+	or or1 (or_result, a, b);
+	
+	adder adder1bit (carry_in, a, b, carry_out, sum);	
+	
+	// Logic of operation part
+	always @ (a or b or operation[1:0])
+	begin
+	case (operation[1:0])
+	2'b00: result = a & b;
+	2'b01: result = a | b;
+	2'b10: result = a ^ b;
+	2'b11: result = !a;
+	default:result = 8'bx;
+	endcase
+	end
+	
+endmodule
+	

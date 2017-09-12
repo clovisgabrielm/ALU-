@@ -1,0 +1,487 @@
+Analysis & Synthesis report for ula
+Wed Dec 17 07:14:51 2014
+Quartus II 32-bit Version 11.1 Build 173 11/01/2011 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |ula
+ 11. Port Connectivity Checks: "msb_ula1bit:ula7|mux4bit:mux_operation"
+ 12. Port Connectivity Checks: "msb_ula1bit:ula7"
+ 13. Port Connectivity Checks: "ula1bit:ula6"
+ 14. Port Connectivity Checks: "ula1bit:ula5"
+ 15. Port Connectivity Checks: "ula1bit:ula4"
+ 16. Port Connectivity Checks: "ula1bit:ula3"
+ 17. Port Connectivity Checks: "ula1bit:ula2"
+ 18. Port Connectivity Checks: "ula1bit:ula1"
+ 19. Port Connectivity Checks: "ula1bit:ula0|mux4bit:mux_operation"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 17 07:14:51 2014    ;
+; Quartus II 32-bit Version          ; 11.1 Build 173 11/01/2011 SJ Web Edition ;
+; Revision Name                      ; ula                                      ;
+; Top-level Entity Name              ; ula                                      ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 30                                       ;
+;     Total combinational functions  ; 30                                       ;
+;     Dedicated logic registers      ; 0                                        ;
+; Total registers                    ; 0                                        ;
+; Total pins                         ; 47                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5AT144A7       ;                    ;
+; Top-level entity name                                                      ; ula                ; ula                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+
+; ula.v                            ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/ula.v         ;
+; adder.v                          ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/adder.v       ;
+; ula1bit.v                        ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/ula1bit.v     ;
+; mux.v                            ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/mux.v         ;
+; mux4bit.v                        ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/mux4bit.v     ;
+; msb_ula1bit.v                    ; yes             ; User Verilog HDL File  ; /home/gabriel/altera/11.1/msb_ula1bit.v ;
++----------------------------------+-----------------+------------------------+-----------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 30      ;
+;                                             ;         ;
+; Total combinational functions               ; 30      ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 28      ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 2       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 30      ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 47      ;
+; Maximum fan-out node                        ; Ainvert ;
+; Maximum fan-out                             ; 18      ;
+; Total fan-out                               ; 134     ;
+; Average fan-out                             ; 1.74    ;
++---------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; |ula                          ; 30 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |ula                                        ;              ;
+;    |msb_ula1bit:ula7|         ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|msb_ula1bit:ula7                       ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|msb_ula1bit:ula7|mux4bit:mux_operation ;              ;
+;    |ula1bit:ula0|             ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula0                           ;              ;
+;       |adder:adder1bit|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula0|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula0|mux4bit:mux_operation     ;              ;
+;       |mux:muxA|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula0|mux:muxA                  ;              ;
+;    |ula1bit:ula1|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula1                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula1|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula1|mux4bit:mux_operation     ;              ;
+;    |ula1bit:ula2|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula2                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula2|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula2|mux4bit:mux_operation     ;              ;
+;    |ula1bit:ula3|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula3                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula3|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula3|mux4bit:mux_operation     ;              ;
+;    |ula1bit:ula4|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula4                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula4|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula4|mux4bit:mux_operation     ;              ;
+;    |ula1bit:ula5|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula5                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula5|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula5|mux4bit:mux_operation     ;              ;
+;    |ula1bit:ula6|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula6                           ;              ;
+;       |adder:adder1bit|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula6|adder:adder1bit           ;              ;
+;       |mux4bit:mux_operation| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|ula1bit:ula6|mux4bit:mux_operation     ;              ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                   ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------+----------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |ula|ula1bit:ula1|mux4bit:mux_operation|Mux1 ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ula ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; less           ; 0     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "msb_ula1bit:ula7|mux4bit:mux_operation"                                                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; OUT  ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "OUT[1..1]" have no fanouts                    ;
+; A    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "A[1..1]" will be connected to GND. ;
+; B    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "B[1..1]" will be connected to GND. ;
+; C    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "C[1..1]" will be connected to GND. ;
+; D    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "D[1..1]" will be connected to GND. ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "msb_ula1bit:ula7"                                                                                                                                                                     ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula6"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula5"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula4"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula3"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula2"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula1"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; less     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; less[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula1bit:ula0|mux4bit:mux_operation"                                                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; OUT  ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "OUT[1..1]" have no fanouts                    ;
+; A    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "A[1..1]" will be connected to GND. ;
+; B    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "B[1..1]" will be connected to GND. ;
+; C    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "C[1..1]" will be connected to GND. ;
+; D    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "D[1..1]" will be connected to GND. ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 173 11/01/2011 SJ Web Edition
+    Info: Processing started: Wed Dec 17 07:14:41 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula -c ula
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ula
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: adder
+Info (12021): Found 1 design units, including 1 entities, in source file ula1bit.v
+    Info (12023): Found entity 1: ula1bit
+Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux.v
+    Info (12023): Found entity 1: mux
+Info (12021): Found 1 design units, including 1 entities, in source file mux4bit.v
+    Info (12023): Found entity 1: mux4bit
+Info (12021): Found 1 design units, including 1 entities, in source file msb_ula1bit.v
+    Info (12023): Found entity 1: msb_ula1bit
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(6): created implicit net for "half_sum"
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(9): created implicit net for "half_carry"
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(10): created implicit net for "a2"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(10): created implicit net for "not_a"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(11): created implicit net for "not_b"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(13): created implicit net for "outputA"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(14): created implicit net for "outputB"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(14): created implicit net for "Binvert"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(16): created implicit net for "and_result"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(18): created implicit net for "or_result"
+Warning (10236): Verilog HDL Implicit Net warning at ula1bit.v(20): created implicit net for "sum"
+Warning (10236): Verilog HDL Implicit Net warning at mux.v(4): created implicit net for "sel_n"
+Warning (10236): Verilog HDL Implicit Net warning at mux.v(5): created implicit net for "sel_x"
+Warning (10236): Verilog HDL Implicit Net warning at mux.v(6): created implicit net for "sel_y"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(11): created implicit net for "not_a"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(12): created implicit net for "not_b"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(14): created implicit net for "outputA"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(15): created implicit net for "outputB"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(15): created implicit net for "Binvert"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(17): created implicit net for "and_result"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(19): created implicit net for "or_result"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(21): created implicit net for "carry_out"
+Warning (10236): Verilog HDL Implicit Net warning at msb_ula1bit.v(21): created implicit net for "sum"
+Info (12127): Elaborating entity "ula" for the top level hierarchy
+Warning (10034): Output port "carry_out[7]" at ula.v(9) has no driver
+Info (12128): Elaborating entity "ula1bit" for hierarchy "ula1bit:ula0"
+Info (12128): Elaborating entity "mux" for hierarchy "ula1bit:ula0|mux:muxA"
+Info (12128): Elaborating entity "adder" for hierarchy "ula1bit:ula0|adder:adder1bit"
+Info (12128): Elaborating entity "mux4bit" for hierarchy "ula1bit:ula0|mux4bit:mux_operation"
+Info (12128): Elaborating entity "msb_ula1bit" for hierarchy "msb_ula1bit:ula7"
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12030): Port "ordered port 0" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic.
+Warning (12010): Port "ordered port 1" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 2" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 3" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12010): Port "ordered port 4" on the entity instantiation of "mux_operation" is connected to a signal of width 1. The formal width of the signal in the module is 2.  The extra bits will be driven by GND.
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "carry_out[7]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "carry_in[0]"
+    Warning (15610): No output dependent on input pin "carry_in[1]"
+    Warning (15610): No output dependent on input pin "carry_in[2]"
+    Warning (15610): No output dependent on input pin "carry_in[3]"
+    Warning (15610): No output dependent on input pin "carry_in[4]"
+    Warning (15610): No output dependent on input pin "carry_in[5]"
+    Warning (15610): No output dependent on input pin "carry_in[6]"
+    Warning (15610): No output dependent on input pin "carry_in[7]"
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 28 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 30 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 309 megabytes
+    Info: Processing ended: Wed Dec 17 07:14:51 2014
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
+
+
